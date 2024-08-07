@@ -53,48 +53,120 @@
           <h1 class="title is-1 publication-title">TurboEdit: Instant text-based image editing</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=V8FwQGkAAAAJ&hl=en">Zongze Wu</a><sup>1</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=V8FwQGkAAAAJ&hl=en">Zongze Wu</a>,
+              </span>
             <span class="author-block">
-              <a href="https://home.ttic.edu/~nickkolkin/home.html">Nicholas Kolkin</a><sup>1</sup>,</span>
+              <a href="https://home.ttic.edu/~nickkolkin/home.html">Nicholas Kolkin</a>,</span>
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/jonathan-brandt-23b334/">Jonathan Brandt</a><sup>1</sup>,
+              <a href="https://www.linkedin.com/in/jonathan-brandt-23b334/">Jonathan Brandt</a>,
             </span>
             <span class="author-block">
-              <a href="https://richzhang.github.io/">Richard Zhang</a><sup>1</sup>,
+              <a href="https://richzhang.github.io/">Richard Zhang</a>,
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=B_FTboQAAAAJ&hl=en">Eli Shechtman</a><sup>1</sup>,
+              <a href="https://research.adobe.com/person/eli-shechtman/">Eli Shechtman</a>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Adobe Research</span>
+            <span class="author-block">Adobe Research</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">To be appeared in ECCV 2024</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://betterze.github.io/TurboEdit/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
           </div>
 
 
-          </div>
+          
         </div>
       </div>
     </div>
   </div>
 </section>
 
+
+<!-- <div class="item item-steve">
+  <video poster="" id="steve" autoplay controls muted loop playsinline width="960" height="720">
+    <source src="./img/teaser.mov" type="video/mp4">
+  </video>
+</div> -->
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./img/turbo_edit10.mp4"
+        <source src="./img/teaser.mov"
                 type="video/mp4">
       </video>
-      <!-- <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2> -->
     </div>
   </div>
 </section>
 
+
+
+
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <img src="./img/black2white.gif" style="height: 50%;"/>
+          <p style="font-size: 16px; text-align: center; padding: 4px;">white to black</p>
+        </div>
+        <div class="item item-chair-tp">
+          <img src="./img/cat2dog.gif" style="height: 50%;"/>
+          <p style="font-size: 16px; text-align: center; padding: 4px;">kitten to puppy</p>
+        </div>
+        <div class="item item-fullbody">
+          <img src="./img/straight.gif" style="height: 50%;"/>
+          <p style="font-size: 16px; text-align: center; padding: 4px;">straight hair to curly hair</p>
+        </div>
+        <div class="item item-shiba">
+          <img src="./img/short.gif" style="height: 50%;"/>
+          <p style="font-size: 16px; text-align: center; padding: 4px;">short hair to long hair</p>
+        </div>
+        <div class="item item-shiba">
+          <img src="./img/old2young.gif" style="height: 50%;"/>
+          <p style="font-size: 16px; text-align: center; padding: 4px;">old to young</p>
+        </div>
+        <div class="item item-shiba">
+          <img src="./img/pharaoh2fox.gif" style="height: 50%;"/>
+          <p style="font-size: 16px; text-align: center; padding: 4px;">pharaoh to fox</p>
+        </div>
+        <div class="item item-shiba">
+          <img src="./img/snow.gif" style="height: 50%;"/>
+          <p style="font-size: 16px; text-align: center; padding: 4px;">add snow</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="hero is-light is-small">
   <div class="hero-body">
@@ -135,42 +207,7 @@
   </div>
 </section>
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="./img/black2white.gif" style="height: 90%;"/>
-          <p style="font-size: 16px; text-align: center; padding: 4px;">black to white</p>
-        </div>
-        <div class="item item-chair-tp">
-          <img src="./img/cat2dog.gif" style="height: 90%;"/>
-          <p style="font-size: 16px; text-align: center; padding: 4px;">kitten to puppy</p>
-        </div>
-        <div class="item item-fullbody">
-          <img src="./img/straight.gif" style="height: 90%;"/>
-          <p style="font-size: 16px; text-align: center; padding: 4px;">straight hair to curly hair</p>
-        </div>
-        <div class="item item-shiba">
-          <img src="./img/short.gif" style="height: 90%;"/>
-          <p style="font-size: 16px; text-align: center; padding: 4px;">short hair to long hair</p>
-        </div>
-        <div class="item item-shiba">
-          <img src="./img/old2young.gif" style="height: 90%;"/>
-          <p style="font-size: 16px; text-align: center; padding: 4px;">old to young</p>
-        </div>
-        <div class="item item-shiba">
-          <img src="./img/pharaoh2fox.gif" style="height: 90%;"/>
-          <p style="font-size: 16px; text-align: center; padding: 4px;">pharaoh to fox</p>
-        </div>
-        <div class="item item-shiba">
-          <img src="./img/snow.gif" style="height: 90%;"/>
-          <p style="font-size: 16px; text-align: center; padding: 4px;">pharaoh to fox</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 
 
@@ -233,50 +270,50 @@ differing only in the specified attribute in c'.
 
 
  
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{wu2024turboedit,
+  author    = {Wu, Zongze and Kolkin, Nicholas and Brandt, Jonathan and Zhang, Richard and Shechtman, Eli},
+  title     = {TurboEdit: Instant text-based image editing},
+  journal   = {ECCV},
+  year      = {2024},
 }</code></pre>
   </div>
-</section> -->
+</section>
 
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
+<section>
+    <!-- Concurrent Work. -->
     <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            Few step diffusion model <a href="https://static1.squarespace.com/static/6213c340453c3f502425776e/t/65663480a92fba51d0e1023f/1701197769659/adversarial_diffusion_distillation.pdf">
+               SDXL-Turbo</a>.
           </p>
           <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            StyleGAN based iterative image inversion method <a href="https://github.com/yuval-alaluf/restyle-encoder">ReStyle</a>.
+          </p>
+          <p>
+             Concurrent few step diffusion image editing works <a href="https://github.com/garibida/ReNoise-Inversion">Renoise</a> and another method also calls 
+             <a href="https://turboedit-paper.github.io/">TurboEdit</a>.
           </p>
         </div>
       </div>
     </div>
+    <!--/ Concurrent Work. -->
+
   </div>
-</footer>
+</section>
+<p>
+  This website is licensed under a <a rel="license"
+                                      href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+  Commons Attribution-ShareAlike 4.0 International License</a>. Website source code based on the <a
+    href="https://nerfies.github.io/">Nerfies</a> project page. If you want to reuse their <a
+    href="https://github.com/nerfies/nerfies.github.io">source code</a>, please credit them appropriately.
+</p>
 
 </body>
 </html>
