@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TurboEdit</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">TurboEdit: Instant text-based image editing</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=V8FwQGkAAAAJ&hl=en">Zongze Wu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://home.ttic.edu/~nickkolkin/home.html">Nicholas Kolkin</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/jonathan-brandt-23b334/">Jonathan Brandt</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://richzhang.github.io/">Richard Zhang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=B_FTboQAAAAJ&hl=en">Eli Shechtman</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Adobe Research</span>
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./img/turbo_edit10.mp4"
+                type="video/mp4">
+      </video>
+      <!-- <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2> -->
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./img/turbo_edit11.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./img/turbo_edit9_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./img/turbo_edit7_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./img/turbo_edit7_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./img/turbo_edit7_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <img src="./img/black2white.gif" style="height: 90%;"/>
+          <p style="font-size: 16px; text-align: center; padding: 4px;">black to white</p>
+        </div>
+        <div class="item item-chair-tp">
+          <img src="./img/cat2dog.gif" style="height: 90%;"/>
+          <p style="font-size: 16px; text-align: center; padding: 4px;">kitten to puppy</p>
+        </div>
+        <div class="item item-fullbody">
+          <img src="./img/straight.gif" style="height: 90%;"/>
+          <p style="font-size: 16px; text-align: center; padding: 4px;">straight hair to curly hair</p>
+        </div>
+        <div class="item item-shiba">
+          <img src="./img/short.gif" style="height: 90%;"/>
+          <p style="font-size: 16px; text-align: center; padding: 4px;">short hair to long hair</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We address the challenges of precise image inversion and disentangled image editing 
+            in the context of few-step diffusion models. We introduce an encoder based iterative inversion technique. The inversion network is conditioned on the input image and the reconstructed image from the previous step, allowing for correction of the next reconstruction towards the input image.
+We demonstrate that disentangled controls can be easily achieved in the few-step diffusion model 
+by conditioning on an (automatically generated) detailed text prompt. To manipulate the inverted image, we freeze the noise maps and modify one attribute in the text prompt (either manually or via instruction based editing driven by an LLM), resulting in the generation of a new image similar to the input image with only one attribute changed. It can further control the editing strength and accept instructive text prompt. Our approach facilitates realistic text-guided image edits in real-time, requiring only 8 number of functional evaluations (NFEs) in inversion (one-time cost) and 4 NFEs per edit. Our method is not only fast, 
+but also significantly outperforms state-of-the-art multi-step diffusion editing techniques.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+
+    <div class="item">
+      <img src="./img/teaser.jpg" style="height: 90%;"/>
+    </div>
+
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Method</h2>
+            <div class="content has-text-justified">
+              <p>
+                Given an input real image x0, we utilize the LLaVA to generate a detailed
+caption c. Users can modify c to create a new text prompt c
+′. The inversion process
+begins by feeding the x0, c, current time step t, and a previously reconstructed image
+x0,t+1 (initialized as a zero matrix) into the inversion network. This network then
+predicts the noise ϵt, which is subsequently input into a frozen SDXL-Turbo model to
+generate the new reconstruction image x0,t. Given the final inverted noise ϵt, along
+with c, we can use SDXL-Turbo to create an inversion trajectory and reconstruct x0,0,
+which is very similar to x0. Using the same noises ϵt and slightly different text prompt
+c
+′, starting from t = T to smaller t, the editing trajectory will be very similar to the
+inversion trajectory, and the generated image will closely resemble the input image,
+differing only in the specified attribute in c'.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--/ Abstract. -->
+
+        <div class="item">
+          <img src="./img/method.jpg" style="height: 90%;"/>
+        </div>
+
+
+ 
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
